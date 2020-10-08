@@ -12,11 +12,14 @@ set(CMAKE_CXX_STANDARD 20)
 # 并将名称保存到DIR_SRCS变量中
 aux_source_directory(. DIR_SRCS)
 
+# 多个目录下，同时编译多个文件-1
 # 指定生成目标
 add_executable(cpp_learn ${DIR_SRCS})
-
 # 添加math子目录
 add_subdirectory(math)
-
 # 添加链接库
 target_link_libraries(cpp_learn MathUtils)
+
+# 多个目录下，同时编译多个文件-2
+# 指定生成目标
+#add_executable(cpp_learn main.cpp math/MathUtils.cpp math/MathUtils.h)
