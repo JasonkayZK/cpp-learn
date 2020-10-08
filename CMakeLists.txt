@@ -23,3 +23,15 @@ target_link_libraries(cpp_learn MathUtils)
 # 多个目录下，同时编译多个文件-2
 # 指定生成目标
 #add_executable(cpp_learn main.cpp math/MathUtils.cpp math/MathUtils.h)
+
+# 导入cJSON-1
+#set(CJSON_LIBRARY "-cJSON")
+#find_package(cJSON REQUIRED)
+#include_directories(${cJSON_INCLUDE_DIR})
+#target_link_libraries(cpp_learn ${CJSON_LIBRARIES})
+
+# 导入cJSON-2
+# 添加cJSON子目录
+add_subdirectory(cJSON)
+# 添加链接库
+target_link_libraries(cpp_learn cJSON)
