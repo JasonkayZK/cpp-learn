@@ -3,4 +3,6 @@ project(cpp_learn)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(cpp_learn main.cpp)
+add_executable(person person.cpp)
+
+add_executable(mutex_test mutex.cpp test_mutex_lock.cpp)
