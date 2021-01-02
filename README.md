@@ -1,13 +1,3 @@
-## Cpp Learn
+## Function Object Wrapper
 
-A repo to learn c++!
-
-### TODO
-
-| Proj                                                        | Date       | INFO           |
-| ----------------------------------------------------------- | ---------- | -------------- |
-| [cmake](https://github.com/JasonkayZK/cpp_learn/tree/cmake) | 2020-10-08 | learning CMake |
-|                                                             |            |                |
-|                                                             |            |                |
-
-
+A branch to learn function wrapper in C++.
