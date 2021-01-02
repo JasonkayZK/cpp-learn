@@ -12,10 +12,12 @@
 
 | Proj                                                        | Date       | INFO           |
 | ----------------------------------------------------------- | ---------- | -------------- |
-| [chapter3-type](https://github.com/JasonkayZK/cpp_learn/tree/chapter3-type) | 2020-11-15 | learning type |
-| [cmake](https://github.com/JasonkayZK/cpp_learn/tree/cmake) | 2020-10-08 | learning CMake |
-|                                                             |            |                |
-|                                                             |            |                |
+| [chapter3-type](https://github.com/JasonkayZK/cpp_learn/tree/chapter3-type) | 2020-11-15 | 学习C++基本类型 |
+| [chapter4-composed_type](https://github.com/JasonkayZK/cpp_learn/tree/chapter4-composed_type) | 2021-01-02 | 学习组合类型 |
+| [cmake](https://github.com/JasonkayZK/cpp_learn/tree/cmake) | 2020-10-08 | 学习CMake |
+| [RAII](https://github.com/JasonkayZK/cpp_learn/tree/raii) | 2021-01-02 | C++中RAII原理 |
+| [function-obj-wrapper](https://github.com/JasonkayZK/cpp_learn/tree/function-obj-wrapper) | 2021-01-02 | 学习函数包装器 |
+| [concurrency](https://github.com/JasonkayZK/cpp_learn/tree/concurrency) | 2021-01-02 | C++11/17/20并发编程 |
 
 ### 其他说明
 
