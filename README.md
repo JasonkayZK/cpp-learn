@@ -1,4 +1,4 @@
-## Cpp Learn
+## C++ Learn
 
 一个从零开始学习C++的仓库；
 
@@ -18,6 +18,7 @@
 | [RAII](https://github.com/JasonkayZK/cpp_learn/tree/raii) | 2021-01-02 | C++中RAII原理 |
 | [function-obj-wrapper](https://github.com/JasonkayZK/cpp_learn/tree/function-obj-wrapper) | 2021-01-02 | 学习函数包装器 |
 | [concurrency](https://github.com/JasonkayZK/cpp_learn/tree/concurrency) | 2021-01-02 | C++11/17/20并发编程 |
+| [dll](https://github.com/JasonkayZK/cpp_learn/tree/dll) | 2021-01-28 | DLL动态库生成 & 调用 |
 
 ### 其他说明
 
