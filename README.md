@@ -1,14 +1,18 @@
-## C++ Learn
+# **C++ Learn**
 
 一个从零开始学习C++的仓库；
 
-### 学习资源下载
+## **学习资料**
 
-包括C++ primer plus(第六版)等pdf电子书；
+- C++ primer plus(第六版)
 
-- https://jasonkayzk.github.io/sharing/
+## **Jupyter分支**
 
-### 已完成项目
+Jupyter 分支为：
+
+- [jupyter](https://github.com/JasonkayZK/cpp-learn/tree/jupyter)
+
+## **已完成项目**
 
 | Proj                                                        | Date       | INFO           |
 | ----------------------------------------------------------- | ---------- | -------------- |
@@ -22,7 +26,7 @@
 | [string](https://github.com/JasonkayZK/cpp_learn/tree/string) | 2021-05-07 | 学习C++中的string模板类 |
 | [smart-pointer](https://github.com/JasonkayZK/cpp_learn/tree/smart-pointer) | 2021-05-09 | 学习C++中的智能指针 |
 
-### 其他说明
+## **其他说明**
 
 如何在Clion中执行单个c++文件：
 
