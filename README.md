@@ -1,34 +1,70 @@
-# **C++ Learn**
+# **Boost Library Learn**
 
-一个从零开始学习C++的仓库；
+A branch to learn how to use [boost library](https://www.boost.org/)
 
-## **学习资料**
+## **Install**
 
-- C++ primer plus(第六版)
+First, download the compressed file, at:
 
-## **Jupyter分支**
+- https://www.boost.org/users/download/
 
-Jupyter 分支为：
+Then, extract the file:
 
-- [jupyter](https://github.com/JasonkayZK/cpp-learn/tree/jupyter)
+```shell
+tar -zxvf boost_1_78_0.tar.gz
+```
 
-## **已完成项目**
+Finally, install the boost library
 
-| Proj                                                        | Date       | INFO           |
-| ----------------------------------------------------------- | ---------- | -------------- |
-| [chapter3-type](https://github.com/JasonkayZK/cpp_learn/tree/chapter3-type) | 2020-11-15 | 学习C++基本类型 |
-| [chapter4-composed_type](https://github.com/JasonkayZK/cpp_learn/tree/chapter4-composed_type) | 2021-01-02 | 学习组合类型 |
-| [cmake](https://github.com/JasonkayZK/cpp_learn/tree/cmake) | 2020-10-08 | 学习CMake |
-| [RAII](https://github.com/JasonkayZK/cpp_learn/tree/raii) | 2021-01-02 | C++中RAII原理 |
-| [function-obj-wrapper](https://github.com/JasonkayZK/cpp_learn/tree/function-obj-wrapper) | 2021-01-02 | 学习函数包装器 |
-| [concurrency](https://github.com/JasonkayZK/cpp_learn/tree/concurrency) | 2021-01-02 | C++11/17/20并发编程 |
-| [dll](https://github.com/JasonkayZK/cpp_learn/tree/dll) | 2021-01-28 | DLL动态库生成 & 调用 |
-| [string](https://github.com/JasonkayZK/cpp_learn/tree/string) | 2021-05-07 | 学习C++中的string模板类 |
-| [smart-pointer](https://github.com/JasonkayZK/cpp_learn/tree/smart-pointer) | 2021-05-09 | 学习C++中的智能指针 |
+```shell
+cd boost_1_78_0
+./bootstrap.sh
+sudo ./b2 install
+```
 
-## **其他说明**
+The, boost library is installed!
 
-如何在Clion中执行单个c++文件：
+- header files: `/usr/local/include/boost`
+- library files: `/usr/local/lib`
 
--   [在Clion中执行单个Cpp文件](https://jasonkayzk.github.io/2020/11/15/在Clion中执行单个Cpp文件/)
+## **Boost Library Used Demo**
 
+Modify `CMakeList.txt`:
+
+```text
+cmake_minimum_required(VERSION 3.21)
+
+project(cpp_learn)
+
+set(CMAKE_CXX_STANDARD 17)
+
+set(BOOST_ROOT "/usr/local/include/boost")
+
+include_directories(/usr/local/include) # header files searching path
+
+link_directories(/usr/local/lib) # library files searching path
+
+add_executable(cpp_learn main.cpp)
+```
+
+Modify `main.cpp` to use:
+
+```C++
+#include <iostream>
+#include <boost/version.hpp>
+
+int main() {
+    std::cout << "Hello, Boost Library: " << BOOST_VERSION << std::endl;
+    return 0;
+}
+```
+
+Then print:
+
+```text
+Hello, Boost Library: 107800
+```
+
+# **Reference**
+
+- https://www.boost.org/
