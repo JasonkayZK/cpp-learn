@@ -14,23 +14,17 @@ on:
 jobs:
   build_and_test:
     name: Build & test on ${{ matrix.os }} with ${{ matrix.compiler }}.
-    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        include:
-          - runs-on: ubuntu-latest
-            compiler: gcc
-            gcc: 8
-          - runs-on: ubuntu-latest
-            compiler: clang
-            clang: 8
-          - runs-on: macos-latest
-            compiler: gcc
-            gcc: 12
-          - runs-on: macos-latest
-            compiler: clang
-            clang: 12
-
+        os:
+          - linux
+          - osx
+        compiler:
+          - g++-8
+          - clang++-8
+          - g++-12
+          - clang++-12
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
