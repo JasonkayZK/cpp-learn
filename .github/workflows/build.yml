@@ -17,8 +17,19 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ ubuntu-latest, macos-latest ]
-        compiler: [ g++-12, g++8, clang++-14, clang++-8 ]
+      include:
+        - runs-on: ubuntu-latest
+          compiler: gcc
+          gcc: 8
+        - runs-on: ubuntu-latest
+          compiler: clang
+          clang: 8
+        - runs-on: macos-latest
+          compiler: gcc
+          gcc: 12
+        - runs-on: macos-latest
+          compiler: clang
+          clang: 12
 
     steps:
       - name: Checkout repo
@@ -28,3 +39,13 @@ jobs:
           cmake ..
           make
           cd ../bin && ./stltest
+        shell: bash
+        env:
+          - name: CXX
+            value: ${{ matrix.compiler }}
+          - name: CC
+            value: ${{ matrix.compiler }}
+          - name: CMAKE_CXX_COMPILER
+            value: ${{ matrix.compiler }}
+          - name: CMAKE_C_COMPILER
+            value: ${{ matrix.compiler }}
