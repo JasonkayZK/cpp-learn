@@ -41,8 +41,8 @@ message(STATUS "The cmake_cxx_flags is: ${CMAKE_CXX_FLAGS}")
 add_subdirectory(${PROJECT_SOURCE_DIR}/test)
 
 # dependencies
-find_package(GTest CONFIG REQUIRED)
-target_link_libraries(stltest PRIVATE GTest::gmock GTest::gtest GTest::gmock_main GTest::gtest_main)
-
-find_package(fmt CONFIG REQUIRED)
-target_link_libraries(stltest PRIVATE fmt::fmt)
+#find_package(GTest CONFIG REQUIRED)
+#target_link_libraries(stltest PRIVATE GTest::gmock GTest::gtest GTest::gmock_main GTest::gtest_main)
+#
+#find_package(fmt CONFIG REQUIRED)
+#target_link_libraries(stltest PRIVATE fmt::fmt)

@@ -7,29 +7,29 @@ on:
   pull_request:
     branches:
       - proj/my-tiny-stl
+  workflow_dispatch:
+    branches:
+      - proj/my-tiny-stl
 
 jobs:
-  build:
+  build_and_test:
+    name: Build & test on ${{ matrix.os }} with ${{ matrix.compiler }}.
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
+        os: [ubuntu-latest, macos-latest]
+        compiler: [ g++-10 ]
         include:
-          - CXX=g++-5
-          - CXX=g++-6
-          - CXX=g++-7
-          - CXX=g++-8
-          - CXX=g++-9
-          - CXX=g++-10
-          - CXX=g++-11
-          - CXX=clang++-7
-          - CXX=clang++-8
-          - CXX=clang++-9
-          - CXX=clang++-10
-          - CXX=clang++-11
-          - CXX=clang++-12
+          - os: ubuntu-latest
+            compiler: g++-10
+            target: Linux
 
+          - os: macos-latest
+            compiler: g++-10
+            target: Macos
 
     steps:
-      - name: Check out repo
+      - name: Checkout repo
         uses: actions/checkout@v2
       - run: |-
           mkdir build && cd ./build
