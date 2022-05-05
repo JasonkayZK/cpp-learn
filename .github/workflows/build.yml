@@ -17,8 +17,8 @@ jobs:
     strategy:
       matrix:
         os:
-          - linux
-          - osx
+          - ubuntu-latest
+          - macos-latest
         compiler:
           - g++-8
           - clang++-8
@@ -28,18 +28,14 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
+        env:
+          CXX: ${{ matrix.compiler }}
+          CC: ${{ matrix.compiler }}
+          CMAKE_CXX_COMPILER: ${{ matrix.compiler }}
+          CMAKE_C_COMPILER: ${{ matrix.compiler }}
       - run: |-
           mkdir build && cd ./build
           cmake ..
           make
           cd ../bin && ./stltest
-        shell: bash
-        env:
-          - name: CXX
-            value: ${{ matrix.compiler }}
-          - name: CC
-            value: ${{ matrix.compiler }}
-          - name: CMAKE_CXX_COMPILER
-            value: ${{ matrix.compiler }}
-          - name: CMAKE_C_COMPILER
-            value: ${{ matrix.compiler }}
+
