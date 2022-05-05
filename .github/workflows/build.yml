@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - proj/my-tiny-stl
+  pull_request:
+    branches:
+      - proj/my-tiny-stl
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        include:
+          - CXX=g++-5
+          - CXX=g++-6
+          - CXX=g++-7
+          - CXX=g++-8
+          - CXX=g++-9
+          - CXX=g++-10
+          - CXX=g++-11
+          - CXX=clang++-7
+          - CXX=clang++-8
+          - CXX=clang++-9
+          - CXX=clang++-10
+          - CXX=clang++-11
+          - CXX=clang++-12
+
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v2
+      - run: |-
+          mkdir build && cd ./build
+          cmake ..
+          make
+          cd ../bin && ./stltest
