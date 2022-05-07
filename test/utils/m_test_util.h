@@ -35,12 +35,11 @@ namespace mytinystl_utils {
     }
 
     template<typename Fn, typename... Args>
-    auto m_cal_time_with_return(Fn& fn, Args&&... args)
-    {
+    auto calculate_time_with_return(Fn &fn, Args &&... args) {
         time_t t1 = clock();
         auto _tmp = fn(std::forward<Args>(args)...);
         time_t t2 = clock();
-        return m_ret_type<decltype(_tmp)>
+        return calculate_time_t<decltype(_tmp)>
                 (
                         _tmp,
                         static_cast<double>(t2) - static_cast<double>(t1),

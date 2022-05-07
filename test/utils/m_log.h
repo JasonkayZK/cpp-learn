@@ -6,7 +6,7 @@
 #define MYTINYSTL_M_LOG_H
 
 #include <fstream>
-#include <time.h>
+#include <ctime>
 
 // Log path
 #define LOG_PATH "log.txt"
@@ -27,12 +27,12 @@ namespace mytinystl_utils {
 
     template<typename T>
     void _m_log(std::ofstream &logger, T t) {
-        log << t;
+        logger << t;
     }
 
     template<typename T, typename... Args>
     void _m_log(std::ofstream &logger, T t, Args... args) {
-        log << t;
+        logger << t;
         _m_log(logger, args...);
     }
 
@@ -43,19 +43,19 @@ namespace mytinystl_utils {
         std::lock_guard<std::mutex> lock(log_mutex);
 #endif
 
-        std::ofstream log(LOG_PATH, std::ios::app);
-        if (!log.is_open()) {
+        std::ofstream logger(LOG_PATH, std::ios::app);
+        if (!logger.is_open()) {
             return ERROR_FILE_OPEN;
         }
 
         std::time_t cur;
         time(&cur);
-        log << std::endl << std::ctime(&cur);
+        logger << std::endl << std::ctime(&cur);
 
-        _m_log(log, args...);
+        _m_log(logger, args...);
 
-        log << std::endl;
-        log.close();
+        logger << std::endl;
+        logger.close();
         return 0;
     }
 
