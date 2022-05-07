@@ -7,7 +7,7 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 add_executable(stltest ${APP_SRC})
 
 # stl utils test
-set(TEST_UTILS TRUE)
+set(TEST_UTILS FALSE)
 
 if ("${TEST_UTILS}" STREQUAL "TRUE")
     set(APP_UTILS_SRC utils/main.cc)
