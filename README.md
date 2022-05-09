@@ -28,7 +28,9 @@ Jupyter 分支为：
 | [lib/boost](https://github.com/JasonkayZK/cpp-learn/tree/lib/boost)                           | 2022-04-11 | 学习 [boost](https://www.boost.org/) |
 | [proj/my-tiny-stl](https://github.com/JasonkayZK/cpp-learn/tree/proj/my-tiny-stl)             | 2022-05-01 | 学习 [MyTinySTL](https://github.com/Alinshans/MyTinySTL) |
 | [lib/fmt](https://github.com/JasonkayZK/cpp-learn/tree/lib/fmt)                               | 2022-05-04 | 学习 [fmt](https://www.boost.org/)</br>相关博文：[《C++库之fmt》](https://jasonkayzk.github.io/2022/05/04/C++库之fmt/) |
-| [value](https://github.com/JasonkayZK/cpp-learn/tree/value) | 2022-05-09 | 学习C++中值类型（左值、右值）</br>相关博文：[C++中move和forward的区别](https://jasonkayzk.github.io/2022/05/08/C++中move和forward的区别/) |
+| [value](https://github.com/JasonkayZK/cpp-learn/tree/value) | 2022-05-09 | 学习C++中值类型（左值、右值）</br>相关博文：[深入理解C++中的move和forward](https://jasonkayzk.github.io/2022/05/08/深入理解C++中的move和forward/) |
+| [lib/GoogleTest](https://github.com/JasonkayZK/cpp-learn/tree/lib/gtest) | 2022-05-10 | 学习[googletest](https://github.com/google/googletest)使用</br>相关博文：[C++中使用GoogleTest进行单元测试](https://jasonkayzk.github.io/2022/05/09/C++中使用GoogleTest进行单元测试/) |
+|  |  |  |
 
 ## **其他说明**
 
