@@ -28,25 +28,19 @@ public:
     std::string _str;
 };
 
-void f_copy(Object obj) {
-    std::cout << "copy function, address: " << &obj << std::endl;
-}
+template<typename T>
+void f_forward(T &&t) {
 
-void f_move(Object &&obj) {
-    Object a_obj(std::move(obj));
-    std::cout << "move function, address: " << &a_obj << std::endl;
+    Object a = std::forward<T>(t);
+
+    std::cout << "forward this object, address: " << &a << std::endl;
 }
 
 int main() {
     Object obj{"abc"};
+    f_forward(obj);
 
-    // function calling
-    f_copy(obj);
-    f_move(std::move(obj));
-
-//    std::cout << obj._str << std::endl; // danger!
-
-    std::cout << "============== end ================" << std::endl;
+    f_forward(Object("def"));
 
     return 0;
 }
