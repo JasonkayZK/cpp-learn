@@ -3,4 +3,5 @@ project(cpp_learn)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(main main.cc)
+add_executable(rvo rvo.cc)
+add_executable(nrvo nrvo.cc)
