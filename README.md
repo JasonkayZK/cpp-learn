@@ -30,7 +30,8 @@ Jupyter 分支为：
 | [lib/fmt](https://github.com/JasonkayZK/cpp-learn/tree/lib/fmt)                               | 2022-05-04 | 学习 [fmt](https://www.boost.org/)</br>相关博文：[《C++库之fmt》](https://jasonkayzk.github.io/2022/05/04/C++库之fmt/) |
 | [value](https://github.com/JasonkayZK/cpp-learn/tree/value) | 2022-05-09 | 学习C++中值类型（左值、右值）</br>相关博文：[深入理解C++中的move和forward](https://jasonkayzk.github.io/2022/05/08/深入理解C++中的move和forward/) |
 | [lib/GoogleTest](https://github.com/JasonkayZK/cpp-learn/tree/lib/gtest) | 2022-05-10 | 学习[googletest](https://github.com/google/googletest)使用</br>相关博文：[C++中使用GoogleTest进行单元测试](https://jasonkayzk.github.io/2022/05/09/C++中使用GoogleTest进行单元测试/) |
-|  |  |  |
+| [RVO](https://github.com/JasonkayZK/cpp_learn/tree/rvo) | 2022-05-11 | 学习 [RVO](https://en.wikipedia.org/wiki/Copy_elision#Return_value_optimization) </br>相关博文：[C++编译器优化中的RVO和NRVO](https://jasonkayzk.github.io/2022/05/11/C++编译器优化中的RVO和NRVO/) |
+| | | |
 
 ## **其他说明**
 
