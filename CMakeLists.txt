@@ -1,5 +1,25 @@
 cmake_minimum_required(VERSION 3.5.1)
 
+# OS Settings
+if (CMAKE_HOST_WIN32)
+    message("WinOS Config")
+    set(WINDOWS 1)
+elseif (CMAKE_HOST_APPLE)
+    message("MacOS Config")
+    set(MACOS 1)
+elseif (CMAKE_HOST_UNIX)
+    message("Linux Config")
+    set(LINUX 1)
+endif ()
+
+if (MACOS)
+    set(CMAKE_TOOLCHAIN_FILE "/Users/Kylinkzhang/vcpkg/scripts/buildsystems/vcpkg.cmake")
+elseif (WINDOWS)
+    set(CMAKE_TOOLCHAIN_FILE "E:/vcpkg/scripts/buildsystems/vcpkg.cmake")
+ELSEIF(LINUX)
+    set(CMAKE_TOOLCHAIN_FILE "/root/self-workspace/vcpkg/scripts/buildsystems/vcpkg.cmake")
+endif ()
+
 project(HelloWorld C CXX)
 
 include(cmake/common.cmake)
