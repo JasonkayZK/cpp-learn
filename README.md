@@ -33,6 +33,7 @@ Jupyter 分支为：
 | [RVO](https://github.com/JasonkayZK/cpp_learn/tree/rvo) | 2022-05-11 | 学习 [RVO](https://en.wikipedia.org/wiki/Copy_elision#Return_value_optimization) </br>相关博文：[C++编译器优化中的RVO和NRVO](https://jasonkayzk.github.io/2022/05/11/C++编译器优化中的RVO和NRVO/) |
 | [lib/grpc](https://github.com/JasonkayZK/cpp-learn/tree/lib/grpc) | 2022-05-15 | 学习 [grpc](https://github.com/grpc/grpc) 使用 |
 | [coroutine](https://github.com/JasonkayZK/cpp-learn/tree/coroutine) | 2022-06-03 | 学习协程实现 |
+| [xmake](https://github.com/JasonkayZK/cpp-learn/tree/xmake) | 2022-06-04 | 学习 [xmake](https://github.com/xmake-io/xmake) 使用 |
 | | | |
 
 ## **其他说明**
