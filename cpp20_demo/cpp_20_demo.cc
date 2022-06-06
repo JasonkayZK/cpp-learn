@@ -11,18 +11,16 @@ struct HelloCoroutine {
 
         std::suspend_never initial_suspend() { return {}; }
 
-        std::suspend_always final_suspend()
-
-        noexcept { return {}; }
+        std::suspend_always final_suspend() noexcept { return {}; }
 
         void unhandled_exception() {}
     };
 
     using promise_type = HelloPromise;
 
-    HelloCoroutine(std::coroutine_handle <HelloPromise> h) : handle(h) {}
+    HelloCoroutine(std::coroutine_handle<HelloPromise> h) : handle(h) {}
 
-    std::coroutine_handle <HelloPromise> handle;
+    std::coroutine_handle<HelloPromise> handle;
 };
 
 HelloCoroutine hello() {
