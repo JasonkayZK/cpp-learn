@@ -1,0 +1,1 @@
+g++ *.cc -o stackless_co_test -O3 -g
