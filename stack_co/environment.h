@@ -5,15 +5,16 @@
 #ifndef COROUTINE_ENVIRONMENT_H
 #define COROUTINE_ENVIRONMENT_H
 
-#pragma once
-
 #include "coroutine.h"
+
 #include <cstddef>
 #include <cstring>
 #include <functional>
 #include <memory>
 
 namespace stack_co {
+
+    class Coroutine;
 
     class Environment {
         friend class Coroutine;

@@ -11,8 +11,8 @@ endif ()
 
 project(coroutine)
 
+ADD_SUBDIRECTORY(stack_co)
+
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(cpp_20_demo cpp20_demo/cpp_20_demo.cc)
-
-TARGET_LINK_LIBRARIES(cpp_20_demo stack_co)

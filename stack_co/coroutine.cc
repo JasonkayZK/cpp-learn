@@ -35,7 +35,7 @@ namespace stack_co {
         }
         auto previous = _master->current();
         _master->push(shared_from_this());
-        _context.switchFrom(&previous->_context);
+        _context.switch_from(&previous->_context);
         return _runtime;
     }
 
@@ -55,7 +55,7 @@ namespace stack_co {
         coroutine._master->pop();
 
         auto &previousContext = current()._context;
-        previousContext.switchFrom(&currentContext);
+        previousContext.switch_from(&currentContext);
     }
 
     void Coroutine::call_when_finish(Coroutine *coroutine) {

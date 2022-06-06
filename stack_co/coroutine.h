@@ -7,12 +7,13 @@
 
 #include "status.h"
 #include "context.h"
-#include "environment.h"
 
 #include <functional>
 #include <memory>
 
 namespace stack_co {
+
+    class Environment;
 
     class Coroutine : public std::enable_shared_from_this<Coroutine> {
         friend class Environment;

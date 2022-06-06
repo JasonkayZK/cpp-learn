@@ -10,13 +10,13 @@ extern void switch_context(stack_co::Context *, stack_co::Context *) asm("switch
 
 namespace stack_co {
 
-    void Context::switchFrom(Context *previous) {
+    void Context::switch_from(Context *previous) {
         switch_context(previous, this);
     }
 
     void Context::prepare(Context::Callback ret, Context::Word rdi) {
-        Word sp = getSp();
-        fillRegisters(sp, ret, rdi);
+        Word sp = get_stack_pointer();
+        fill_registers(sp, ret, rdi);
     }
 
     bool Context::test() {
@@ -25,13 +25,13 @@ namespace stack_co {
         return diff >= 0 && diff < STACK_SIZE;
     }
 
-    Context::Word Context::getSp() {
+    Context::Word Context::get_stack_pointer() {
         auto sp = std::end(_stack) - sizeof(Word);
         sp = decltype(sp)(reinterpret_cast<size_t>(sp) & (~0xF));
         return sp;
     }
 
-    void Context::fillRegisters(Word sp, Callback ret, Word rdi, ...) {
+    void Context::fill_registers(Word sp, Callback ret, Word rdi, ...) {
         ::memset(_registers, 0, sizeof _registers);
         auto pRet = (Word *) sp;
         *pRet = (Word) ret;

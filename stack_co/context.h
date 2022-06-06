@@ -5,13 +5,13 @@
 #ifndef COROUTINE_CONTEXT_H
 #define COROUTINE_CONTEXT_H
 
-#include "coroutine.h"
-
 #include <cstddef>
 #include <cstring>
 #include <iterator>
 
 namespace stack_co {
+
+    class Coroutine;
 
     /**
      * The context of coroutine(in x86-64)
@@ -46,14 +46,14 @@ namespace stack_co {
     public:
         void prepare(Callback ret, Word rdi);
 
-        void switchFrom(Context *previous);
+        void switch_from(Context *previous);
 
         bool test();
 
     private:
-        Word getSp();
+        Word get_stack_pointer();
 
-        void fillRegisters(Word sp, Callback ret, Word rdi, ...);
+        void fill_registers(Word sp, Callback ret, Word rdi, ...);
 
     private:
         /**
