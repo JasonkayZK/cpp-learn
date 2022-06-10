@@ -2,9 +2,13 @@
 
 一个从零开始学习C++的仓库；
 
+
+
 ## **学习资料**
 
 - [C++ Primer 中文版（第 5 版）](https://book.douban.com/subject/25708312/)
+
+
 
 ## **Jupyter分支**
 
@@ -12,9 +16,21 @@ Jupyter 分支为：
 
 - [jupyter](https://github.com/JasonkayZK/cpp-learn/tree/jupyter)
 
+
+
+## **学习进度**
+
+| **Chapter** | **Date** | **Info** |
+| ----------- | -------- | -------- |
+|             |          |          |
+|             |          |          |
+|             |          |          |
+
+
+
 ## **已完成项目**
 
-| Proj                                                                                              | Date       | INFO           |
+| **Proj**                                                                                          | **Date**   | **Info**   |
 |---------------------------------------------------------------------------------------------------|------------| -------------- |
 | [cmake](https://github.com/JasonkayZK/cpp_learn/tree/cmake)                                       | 2020-10-08 | 学习CMake |
 | [RAII](https://github.com/JasonkayZK/cpp_learn/tree/raii)                                         | 2021-01-02 | C++中RAII原理 |
@@ -33,6 +49,8 @@ Jupyter 分支为：
 | [coroutine](https://github.com/JasonkayZK/cpp-learn/tree/coroutine)                               | 2022-06-03 | 学习协程实现 |
 | [xmake](https://github.com/JasonkayZK/cpp-learn/tree/xmake)                                       | 2022-06-04 | 学习 [xmake](https://github.com/xmake-io/xmake) 使用 |
 |                                                                                                   | | |
+
+
 
 ## **其他说明**
 
