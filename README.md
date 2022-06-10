@@ -23,7 +23,7 @@ Jupyter 分支为：
 | **Chapter**                                                                   | **Date**   | **Info**               |
 |-------------------------------------------------------------------------------| ---------- | ---------------------- |
 | [chapter1](https://github.com/JasonkayZK/cpp-learn/tree/cpp-primer/chapter-1) | 2022-06-10 | Chapter 1: Basic |
-|                                                                               |            |                        |
+| [chapter2](https://github.com/JasonkayZK/cpp-learn/tree/cpp-primer/chapter-2) | 2022-06-10 | Chapter 2: Variable & Basic Type |
 |                                                                               |            |                        |
 |                                                                               |            |                        |
 
