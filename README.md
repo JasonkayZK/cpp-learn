@@ -20,19 +20,20 @@ Jupyter 分支为：
 
 ## **学习进度**
 
-| **Chapter**                                                  | **Date**   | **Info**               |
-| ------------------------------------------------------------ | ---------- | ---------------------- |
-| [chapter1](https://github.com/JasonkayZK/cpp-learn/tree/cpp-primer/chapter1) | 2022-06-10 | Chapter 1: Basic |
-|                                                              |            |                        |
-|                                                              |            |                        |
-|                                                              |            |                        |
+| **Chapter**                                                                   | **Date**   | **Info**               |
+|-------------------------------------------------------------------------------| ---------- | ---------------------- |
+| [chapter1](https://github.com/JasonkayZK/cpp-learn/tree/cpp-primer/chapter-1) | 2022-06-10 | Chapter 1: Basic |
+|                                                                               |            |                        |
+|                                                                               |            |                        |
+|                                                                               |            |                        |
 
 
 
-## **已完成项目**
+## **Projects**
 
-| **Proj**                                                                                          | **Date**   | **Info**   |
-|---------------------------------------------------------------------------------------------------|------------| -------------- |
+| **Project**                                                                                       | **Date**   | **Info**   |
+|:--------------------------------------------------------------------------------------------------|------------| -------------- |
+| [cpp-primer](https://github.com/JasonkayZK/cpp-learn/tree/cpp-primer/) | 2022-06-10 | 通过 [《C++ Primer 中文版（第 5 版）》](https://book.douban.com/subject/25708312/) 学习C++的笔记 |
 | [cmake](https://github.com/JasonkayZK/cpp_learn/tree/cmake)                                       | 2020-10-08 | 学习CMake |
 | [RAII](https://github.com/JasonkayZK/cpp_learn/tree/raii)                                         | 2021-01-02 | C++中RAII原理 |
 | [function-obj-wrapper](https://github.com/JasonkayZK/cpp_learn/tree/function-obj-wrapper)         | 2021-01-02 | 学习函数包装器 |
