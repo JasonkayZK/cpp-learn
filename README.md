@@ -22,7 +22,7 @@ Jupyter 分支为：
 
 | **Chapter**                                                  | **Date**   | **Info**               |
 | ------------------------------------------------------------ | ---------- | ---------------------- |
-| [chapter1](https://github.com/JasonkayZK/cpp-learn/tree/cpp-primer/chapter1) | 2022-06-10 | Chapter 1: <br />Basic |
+| [chapter1](https://github.com/JasonkayZK/cpp-learn/tree/cpp-primer/chapter1) | 2022-06-10 | Chapter 1: Basic |
 |                                                              |            |                        |
 |                                                              |            |                        |
 |                                                              |            |                        |
