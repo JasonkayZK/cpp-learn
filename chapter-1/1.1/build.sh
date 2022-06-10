@@ -1,0 +1,1 @@
+g++ err_code.cc -o err_code
