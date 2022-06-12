@@ -5,12 +5,12 @@
 #ifndef COROUTINE_SCHEDULE_H
 #define COROUTINE_SCHEDULE_H
 
-#include "schedule.h"
+#include "utils.h"
+#include "coroutine.h"
 
 #include <cstdio>
 #include <cstdlib>
 #include <cassert>
-#include <cstddef>
 #include <cstring>
 #include <cstdint>
 
@@ -24,15 +24,13 @@
 
 namespace stackless_co {
 
-    struct Schedule;
+    class Coroutine;
 
-    typedef void (*coroutine_func)(Schedule *, void *ud);
-
-    struct Schedule {
+    class Schedule {
 
     private:
 
-        void _save_stack(struct coroutine *C, char *top);
+        static void _save_stack(Coroutine *C, char *top);
 
     public:
         static Schedule *coroutine_open();
@@ -47,7 +45,7 @@ namespace stackless_co {
 
         int coroutine_status(int id);
 
-        int coroutine_running();
+        int coroutine_running() const;
 
         void coroutine_yield();
 
@@ -72,7 +70,7 @@ namespace stackless_co {
         int nco;
         int cap;
         int running;
-        struct coroutine **co;
+        Coroutine **co;
     };
 
 } // stackless_co
