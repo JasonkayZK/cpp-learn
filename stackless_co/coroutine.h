@@ -58,6 +58,10 @@ namespace stackless_co {
             return this->cap;
         }
 
+        inline void *get_ud() {
+            return this->ud;
+        }
+
         inline void set_status(int status) {
             this->status = status;
         }
@@ -78,7 +82,6 @@ namespace stackless_co {
         coroutine_func func;
         void *ud;
         ucontext_t ctx;
-        Schedule *sch;
         ptrdiff_t cap;
         ptrdiff_t size;
         int status;

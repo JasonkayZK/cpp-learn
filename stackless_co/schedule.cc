@@ -29,7 +29,7 @@ namespace stackless_co {
         s->nco = 0;
         s->cap = DEFAULT_COROUTINE;
         s->running = -1;
-        s->co = (Coroutine **) malloc(sizeof(Coroutine *) * s->cap);
+        s->co = (Coroutine **) malloc(sizeof(Coroutine) * s->cap);
         memset(s->co, 0, sizeof(struct coroutine *) * s->cap);
         return s;
     }
@@ -39,7 +39,7 @@ namespace stackless_co {
         auto *s = (Schedule *) ptr;
         int id = s->running;
         Coroutine *c = s->co[id];
-        c->get_func();
+        c->get_func()(s, c->get_ud());
         c->delete_co();
         s->co[id] = nullptr;
         --s->nco;
@@ -64,7 +64,7 @@ namespace stackless_co {
 
         if (this->nco >= this->cap) {
             int id = this->cap;
-            this->co = (Coroutine **) realloc(this->co, this->cap * 2 * sizeof(Coroutine *));
+            this->co = (Coroutine **) realloc(this->co, this->cap * 2 * sizeof(Coroutine));
             memset(this->co + this->cap, 0, sizeof(struct coroutine *) * this->cap);
             this->co[this->cap] = inner_co;
             this->cap *= 2;

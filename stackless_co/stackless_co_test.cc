@@ -13,8 +13,7 @@ struct args {
 void foo(stackless_co::Schedule *s, void *ud) {
     args *arg = static_cast<args *>(ud);
     int start = arg->n;
-    int i;
-    for (i = 0; i < 5; i++) {
+    for (int i = 0; i < 5; i++) {
         printf("coroutine %d : %d\n", s->coroutine_running(), start + i);
         s->coroutine_yield();
     }

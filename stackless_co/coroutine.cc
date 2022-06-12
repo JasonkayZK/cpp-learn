@@ -12,7 +12,6 @@ namespace stackless_co {
         auto *co = new(Coroutine);
         co->func = func;
         co->ud = ud;
-        co->sch = s;
         co->cap = 0;
         co->size = 0;
         co->status = Schedule::COROUTINE_READY;
