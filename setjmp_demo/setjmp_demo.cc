@@ -13,7 +13,7 @@ jmp_buf Main;
 jmp_buf PointPing;
 jmp_buf PointPong;
 
-void Ping(void) {
+void Ping() {
     if (setjmp(PointPing) == 0) longjmp(Main, 1); // 可以理解为重置，reset the world
     while (1) {
         printf("%3d : Ping-", iter);
@@ -21,7 +21,7 @@ void Ping(void) {
     }
 }
 
-void Pong(void) {
+void Pong() {
     if (setjmp(PointPong) == 0) longjmp(Main, 1);
     while (1) {
         printf("Pong\n");

@@ -11,10 +11,12 @@ endif ()
 
 project(coroutine)
 
+ADD_SUBDIRECTORY(cpp20_demo)
+
+ADD_SUBDIRECTORY(setjmp_demo)
+
 ADD_SUBDIRECTORY(stack_co)
 
 ADD_SUBDIRECTORY(stackless_co)
 
 set(CMAKE_CXX_STANDARD 20)
-
-add_executable(cpp_20_demo cpp20_demo/cpp_20_demo.cc)
