@@ -56,8 +56,6 @@ namespace stack_co {
 
         Coroutine &operator=(Coroutine &&) = delete;
 
-        // 由于用到std::make_shared，必须公开这个构造函数
-        // TODO 设为private
     public:
 
         // 构造Coroutine执行函数，entry为函数入口，对应传参为arguments...
@@ -73,7 +71,7 @@ namespace stack_co {
     private:
         Status _runtime{};
 
-        Context _context;
+        Context _context{};
 
         std::function<void()> _entry;
 
