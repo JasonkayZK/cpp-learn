@@ -24,4 +24,4 @@ namespace stackless_co {
         free(this);
     }
 
-} // stackless_co
+} // namespace stackless_co

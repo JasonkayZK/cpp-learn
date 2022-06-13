@@ -153,4 +153,4 @@ namespace stackless_co {
         memcpy(c->get_stack(), &dummy, c->get_size());
     }
 
-} // stackless_co
+} // namespace stackless_co

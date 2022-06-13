@@ -15,7 +15,7 @@ namespace stack_co {
         return current()._context.test();
     }
 
-    const Status Coroutine::runtime() const {
+    Status Coroutine::runtime() const {
         return _runtime;
     }
 
@@ -27,7 +27,7 @@ namespace stack_co {
         return _runtime & Status::RUNNING;
     }
 
-    const Status Coroutine::resume() {
+    Status Coroutine::resume() {
         if (!(_runtime & Status::RUNNING)) {
             _context.prepare(Coroutine::call_when_finish, this);
             _runtime |= Status::RUNNING;
@@ -38,15 +38,6 @@ namespace stack_co {
         _context.switch_from(&previous->_context);
         return _runtime;
     }
-
-// usage: Coroutine::current().yield()
-// void Coroutine::yield() {
-//     if(&current() != this) {
-//         throw std::runtime_error("cannot yield");
-//     }
-//     _master->pop();
-//     current()._context.switchFrom(&_context);
-// }
 
     void Coroutine::yield() {
         auto &coroutine = current();
@@ -67,5 +58,4 @@ namespace stack_co {
         yield();
     }
 
-} // co
-
+} // namespace stack_co

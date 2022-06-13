@@ -16,7 +16,7 @@ namespace stack_co {
             return ::stack_co::Coroutine::yield();
         }
 
-    } // this_coroutine
+    } // namespace this_coroutine
 
     inline bool test() {
         return Coroutine::test();
@@ -26,6 +26,6 @@ namespace stack_co {
         return Environment::instance();
     }
 
-} // co
+} // namespace stack_co
 
 #endif //COROUTINE_UTILS_H

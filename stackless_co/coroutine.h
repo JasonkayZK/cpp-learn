@@ -88,6 +88,6 @@ namespace stackless_co {
         char *stack;
     };
 
-} // stackless_co
+} // namespace stackless_co
 
 #endif //COROUTINE_COROUTINE_H

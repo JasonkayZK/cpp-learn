@@ -73,6 +73,6 @@ namespace stackless_co {
         Coroutine **co;
     };
 
-} // stackless_co
+} // namespace stackless_co
 
 #endif //COROUTINE_SCHEDULE_H

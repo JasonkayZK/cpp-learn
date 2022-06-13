@@ -66,6 +66,6 @@ namespace stack_co {
         char _stack[STACK_SIZE];
     };
 
-} // stack_co
+} // namespace stack_co
 
 #endif //COROUTINE_CONTEXT_H

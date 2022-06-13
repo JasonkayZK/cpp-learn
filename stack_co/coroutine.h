@@ -28,7 +28,7 @@ namespace stack_co {
 
         // 获取当前运行时信息
         // 目前仅支持运行、退出、主协程的判断
-        const Status runtime() const;
+        Status runtime() const;
 
         bool exit() const;
 
@@ -45,7 +45,7 @@ namespace stack_co {
         //        但是这个值只适用于简单的场合
         //        如果接下来其它协程的运行也影响了该协程的状态
         //        那建议用runtime()获取
-        const Status resume();
+        Status resume();
 
         // usage: Coroutine::current().yield()
         // void yield();

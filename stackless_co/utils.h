@@ -10,6 +10,7 @@ namespace stackless_co {
     class Schedule;
 
     typedef void (*coroutine_func)(Schedule *, void *ud);
-}
+
+} // namespace stackless_co
 
 #endif //COROUTINE_UTILS_H

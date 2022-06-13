@@ -40,4 +40,4 @@ namespace stack_co {
         _registers[RDI] = rdi;
     }
 
-} // stack_co
+} // namespace stack_co
