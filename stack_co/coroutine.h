@@ -36,6 +36,7 @@ namespace stack_co {
 
         // 核心操作：resume和yield
 
+        // usage: Coroutine::current().yield()
         static void yield();
 
         // Note1: 允许处于EXIT状态的协程重入，从而再次resume
@@ -46,9 +47,6 @@ namespace stack_co {
         //        如果接下来其它协程的运行也影响了该协程的状态
         //        那建议用runtime()获取
         Status resume();
-
-        // usage: Coroutine::current().yield()
-        // void yield();
 
         Coroutine(const Coroutine &) = delete;
 
