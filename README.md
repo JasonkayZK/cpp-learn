@@ -50,7 +50,8 @@ Jupyter 分支为：
 | [lib/grpc](https://github.com/JasonkayZK/cpp-learn/tree/lib/grpc)                                 | 2022-05-15 | 学习 [grpc](https://github.com/grpc/grpc) 使用 |
 | [coroutine](https://github.com/JasonkayZK/cpp-learn/tree/coroutine)                               | 2022-06-03 | 学习协程实现 |
 | [xmake](https://github.com/JasonkayZK/cpp-learn/tree/xmake)                                       | 2022-06-04 | 学习 [xmake](https://github.com/xmake-io/xmake) 使用 |
-|                                                                                                   | | |
+| [lib/spdlog](https://github.com/JasonkayZK/cpp-learn/tree/lib/spdlog) | 2022-06-17 | 学习 [spdlog](https://github.com/gabime/spdlog) 使用 |
+| | | |
 
 
 
