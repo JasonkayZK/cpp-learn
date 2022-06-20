@@ -51,6 +51,7 @@ Jupyter 分支为：
 | [coroutine](https://github.com/JasonkayZK/cpp-learn/tree/coroutine)                               | 2022-06-03 | 学习协程实现 |
 | [xmake](https://github.com/JasonkayZK/cpp-learn/tree/xmake)                                       | 2022-06-04 | 学习 [xmake](https://github.com/xmake-io/xmake) 使用 |
 | [lib/spdlog](https://github.com/JasonkayZK/cpp-learn/tree/lib/spdlog) | 2022-06-17 | 学习 [spdlog](https://github.com/gabime/spdlog) 使用 |
+| [once-constuctor](https://github.com/JasonkayZK/cpp-learn/tree/once-constuctor) | 2022-06-20 | 使用纯模板实现的在编译期限制某个类只可构造一次的方法； |
 | | | |
 
 
