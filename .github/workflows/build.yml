@@ -12,13 +12,13 @@ jobs:
       matrix:
         os:
           - ubuntu-latest
-          - macos-latest
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
       - run: |-
+          ./scripts/init-env.sh Release
           mkdir build && cd ./build
           cmake ..
           make
-          cd ../bin && ./main
+          cd ../build && ./*_test
