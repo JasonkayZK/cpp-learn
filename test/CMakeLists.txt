@@ -18,4 +18,4 @@ if ("${TEST_UTILS}" STREQUAL "TRUE")
     # dependencies
     find_package(GTest CONFIG REQUIRED)
     target_link_libraries(stl_util_test PRIVATE GTest::gmock GTest::gtest GTest::gmock_main GTest::gtest_main)
-endif()
+endif ()
