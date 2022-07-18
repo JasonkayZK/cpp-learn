@@ -6,7 +6,6 @@ switch_context:
     movq %rbx, 96(%rdi)
     movq %rcx, 88(%rdi)
     movq %rdx, 80(%rdi)
-    movq 0(%rax), %rax
     movq %rax, 72(%rdi)
     movq %rsi, 64(%rdi)
     movq %rdi, 56(%rdi)
@@ -20,7 +19,7 @@ switch_context:
 
     movq 48(%rsi), %rbp
     movq 104(%rsi), %rsp
-    movq (%rsi), %r15
+    movq %rsi, %r15
     movq 8(%rsi), %r14
     movq 16(%rsi), %r13
     movq 24(%rsi), %r12
@@ -33,6 +32,6 @@ switch_context:
     movq 96(%rsi), %rbx
     movq 64(%rsi), %rsi
 
-    movq %rax, (%rsp)
+    movq %rax, %rsp
     xorq %rax, %rax
     ret
