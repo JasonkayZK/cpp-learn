@@ -33,5 +33,4 @@ switch_context:
     movq 64(%rsi), %rsi
 
     movq %rax, %rsp
-    xorq %rax, %rax
     ret
