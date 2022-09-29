@@ -44,14 +44,55 @@ TEST(DBTest, DBConnectionOk) {
 
 TEST(DBTest, CreateTable) {
 
+  try {
+    auto w = pqxx::work(*db_handler);
+    pqxx::result r = w.exec("CREATE TABLE IF NOT EXISTS student \n"
+                            "(\n"
+                            "    id        SERIAL,\n"
+                            "    name      varchar(20) not null,\n"
+                            "    dept_name varchar(20),\n"
+                            "    tot_cred  numeric(3, 0) check (tot_cred >= 0),\n"
+                            "    primary key (id)\n"
+                            ");");
+    w.commit();
+  } catch (std::exception &e) {
+    std::cout << "Exception: " << e.what() << std::endl;
+    FAIL();
+  }
+
+  std::cout << "Create table success " << std::endl;
+  SUCCEED();
 }
 
 TEST(DBTest, Insert) {
 
+  try {
+    auto w = pqxx::work(*db_handler);
+    pqxx::result r = w.exec(fmt::format(
+        "INSERT INTO student (name,dept_name,tot_cred) values ({}, {}, {})",
+        "'haha'", "'dept1'", 0));
+    w.commit();
+  } catch (std::exception &e) {
+    std::cout << "Exception: " << e.what() << std::endl;
+    FAIL();
+  }
+  std::cout << "Insert success: " << std::endl;
+  SUCCEED();
 }
 
 TEST(DBTest, Update) {
-
+  try {
+    auto w = pqxx::work(*db_handler);
+    pqxx::result r = w.exec(fmt::format(
+        "INSERT INTO student (name,dept_name,tot_cred) values ({}, {}, {})",
+        "'haha'", "'dept1'", 0));
+    w.commit();
+  } catch (std::exception &e) {
+    std::cout << "Exception: " << e.what() << std::endl;
+    FAIL();
+  }
+  std::cout << "Insert success: " << std::endl;
+  SUCCEED();
 }
 
 TEST(DBTest, Select) {
