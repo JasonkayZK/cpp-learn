@@ -46,7 +46,7 @@ TEST(DBTest, CreateTable) {
 
   try {
     auto w = pqxx::work(*db_handler);
-    pqxx::result r = w.exec("CREATE TABLE IF NOT EXISTS student \n"
+    pqxx::result r = w.exec("CREATE TABLE IF NOT EXISTS test_student \n"
                             "(\n"
                             "    id        SERIAL,\n"
                             "    name      varchar(20) not null,\n"
@@ -60,7 +60,7 @@ TEST(DBTest, CreateTable) {
     FAIL();
   }
 
-  std::cout << "Create table success " << std::endl;
+  std::cout << "Create table success!" << std::endl;
   SUCCEED();
 }
 
@@ -69,14 +69,14 @@ TEST(DBTest, Insert) {
   try {
     auto w = pqxx::work(*db_handler);
     pqxx::result r = w.exec(fmt::format(
-        "INSERT INTO student (name,dept_name,tot_cred) values ({}, {}, {})",
+        "INSERT INTO test_student (name,dept_name,tot_cred) values ({}, {}, {})",
         "'haha'", "'dept1'", 0));
     w.commit();
   } catch (std::exception &e) {
     std::cout << "Exception: " << e.what() << std::endl;
     FAIL();
   }
-  std::cout << "Insert success: " << std::endl;
+  std::cout << "Insert success!" << std::endl;
   SUCCEED();
 }
 
@@ -84,27 +84,60 @@ TEST(DBTest, Update) {
   try {
     auto w = pqxx::work(*db_handler);
     pqxx::result r = w.exec(fmt::format(
-        "INSERT INTO student (name,dept_name,tot_cred) values ({}, {}, {})",
-        "'haha'", "'dept1'", 0));
+        "UPDATE test_student set tot_cred={} where name={}",
+        100, "'haha'"));
     w.commit();
   } catch (std::exception &e) {
     std::cout << "Exception: " << e.what() << std::endl;
     FAIL();
   }
-  std::cout << "Insert success: " << std::endl;
+  std::cout << "Update success!" << std::endl;
   SUCCEED();
 }
 
 TEST(DBTest, Select) {
-
+  try {
+    pqxx::nontransaction n(*db_handler);
+    pqxx::result r = n.exec("SELECT * FROM test_student");
+    for (pqxx::result::const_iterator c = r.begin(); c != r.end(); ++c) {
+      std::cout << "id = " << c[0].as<int>() << std::endl;
+      std::cout << "name = " << c[1].as<std::string>() << std::endl;
+      std::cout << "dept_name = " << c[2].as<std::string>() << std::endl;
+      std::cout << "tot_cred = " << c[3].as<int>() << std::endl;
+    }
+  } catch (std::exception &e) {
+    std::cout << "Exception: " << e.what() << std::endl;
+    FAIL();
+  }
+  std::cout << "Select success!" << std::endl;
+  SUCCEED();
 }
 
 TEST(DBTest, Delete) {
-
+  try {
+    auto w = pqxx::work(*db_handler);
+    pqxx::result r = w.exec(fmt::format(
+        "DELETE FROM test_student where id={}", 1));
+    w.commit();
+  } catch (std::exception &e) {
+    std::cout << "Exception: " << e.what() << std::endl;
+    FAIL();
+  }
+  std::cout << "Delete success!" << std::endl;
+  SUCCEED();
 }
 
 TEST(DBTest, DropTable) {
-
+  try {
+    auto w = pqxx::work(*db_handler);
+    pqxx::result r = w.exec("DROP TABLE IF EXISTS test_student");
+    w.commit();
+  } catch (std::exception &e) {
+    std::cout << "Exception: " << e.what() << std::endl;
+    FAIL();
+  }
+  std::cout << "DropTable success!" << std::endl;
+  SUCCEED();
 }
 
 int main(int argc, char **argv) {
