@@ -8,6 +8,8 @@
  */
 
 #include <cassert>
+#include <cstdio>
+#include <cstdlib>
 
 #ifdef TRACK_MEMORY
 #include <map>
