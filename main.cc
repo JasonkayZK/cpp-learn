@@ -14,4 +14,7 @@ int main() {
 
   auto *testStruct = new TestStruct;
   delete testStruct;
+
+  auto *ptr = malloc(sizeof(TestStruct));
+  free(ptr);
 }
