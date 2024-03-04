@@ -1,5 +1,5 @@
 project(000_version)
 
-add_executable(000_version_bin main.cpp)
+add_executable(version version.cpp)
 
-target_link_libraries(000_version_bin PRIVATE Boost::boost)
+target_link_libraries(version PRIVATE Boost::boost)
