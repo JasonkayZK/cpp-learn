@@ -25,3 +25,4 @@ if (Boost_FOUND)
 endif ()
 
 add_subdirectory(000_version)
+add_subdirectory(001_asio)
