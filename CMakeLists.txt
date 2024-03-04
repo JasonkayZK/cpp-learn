@@ -1,31 +1,27 @@
 cmake_minimum_required(VERSION 3.21)
+set(CMAKE_CXX_STANDARD 11)
 
 project(cpp_learn)
 
 # os check
 if (CMAKE_HOST_WIN32)
-    set(WINDOWS 1)
+  set(WINDOWS 1)
+  message("On Windows")
 elseif (CMAKE_HOST_APPLE)
-    set(MACOS 1)
+  set(MACOS 1)
+  message("On MacOS")
 elseif (CMAKE_HOST_UNIX)
-    set(LINUX 1)
+  set(LINUX 1)
+  message("On Linux")
 endif ()
 
-set(CMAKE_CXX_STANDARD 17)
+# Boost lib settings
+set(Boost_USE_STATIC_LIBS ON)
+set(Boost_USE_STATIC_RUNTIME ON)
 
-if (MACOS)
-    set(BOOST_ROOT "/usr/local/include/boost")
-    include_directories(/usr/local/include) # header files searching path
-    link_directories(/usr/local/lib) # library files searching path
-elseif (WINDOWS)
-    set(BOOST_ROOT " E:\\libs\\boost_1_78_0")
-    include_directories(${BOOST_ROOT}) # header files searching path
-    link_directories(${BOOST_ROOT}\\stage\\lib) # library files searching path
-
-    #elseif (LINUX)
-    #    message("配置LINUX VCPKG 路径")
-    #    include_directories(/home/dev/Desktop/vcpkg/installed/x64-linux/include)
-    #    link_directories(/home/dev/Desktop/vcpkg/installed/x64-linux/lib)
+find_package(Boost REQUIRED)
+if (Boost_FOUND)
+  include_directories(${Boost_INCLUDE_DIRS})
 endif ()
 
-add_executable(cpp_learn main.cpp)
+add_subdirectory(000_version)
