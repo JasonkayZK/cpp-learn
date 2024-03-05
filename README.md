@@ -54,7 +54,8 @@ Jupyter 分支为：
 | [once-constuctor](https://github.com/JasonkayZK/cpp-learn/tree/once-constuctor) | 2022-06-20 | 使用纯模板实现的在编译期限制某个类只可构造一次的方法；                                                                                                                                            |                                                                                                                                             |
 | [postgre](https://github.com/JasonkayZK/cpp-learn/tree/postgre) | 2022-09-28 | 学习Postgre 连接 [libpqxx](https://github.com/jtv/libpqxx) 使用                                                                                                              |                                                                                                               |
 | [track-memory](https://github.com/JasonkayZK/cpp-learn/tree/track-memory) | 2022-11-10 | 通过覆盖 `malloc`,`free`,`new`,`delete`,`new[]` 和 `delete[]` 函数实现简单的内存跟踪                                                                                                   | [《简单实现C++内存分配跟踪》](https://jasonkayzk.github.io/2022/11/12/简单实现C-内存分配跟踪/)                         |
-| | |                                                                                                                                                                        |                                                                                                                                                                        |
+| [lib/dbg-macro](https://github.com/JasonkayZK/cpp-learn/tree/lib/dbg-macro) | 2024-03-05 | 学习 [dbg-macro](https://github.com/sharkdp/dbg-macro) 使用 |                                                                                                                                                                        |
+| | | | |
 
 <br/>
 
