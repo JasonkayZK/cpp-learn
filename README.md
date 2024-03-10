@@ -15,4 +15,5 @@ C++ 几种热更新方式的总结：
 - [Linux Preload Hook原理与实践](https://www.0xaa55.com/thread-25664-1-1.html)
 - [使用LD_PRELOAD注入程序](https://www.cnblogs.com/sandeepin/p/ld-preload-inject.html)
 - https://github.com/zhangyi1357/Notes/blob/main/hot-reload.md
+- [Lua与C/C++交互——C/C++调用Lua脚本](https://www.cnblogs.com/DeeLMind/p/7655968.html)
 
