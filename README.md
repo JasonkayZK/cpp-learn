@@ -56,7 +56,7 @@ Jupyter 分支为：
 | [track-memory](https://github.com/JasonkayZK/cpp-learn/tree/track-memory) | 2022-11-10 | 通过覆盖 `malloc`,`free`,`new`,`delete`,`new[]` 和 `delete[]` 函数实现简单的内存跟踪                                                                                                   | [《简单实现C++内存分配跟踪》](https://jasonkayzk.github.io/2022/11/12/简单实现C-内存分配跟踪/)                         |
 | [lib/dbg-macro](https://github.com/JasonkayZK/cpp-learn/tree/lib/dbg-macro) | 2024-03-05 | 学习 [dbg-macro](https://github.com/sharkdp/dbg-macro) 使用 |                                                                                                                                                                        |
 | [proj/qtmqtt](https://github.com/JasonkayZK/cpp-learn/tree/proj/qtmqtt) | 2024-03-07 | 在 Qt 项目中嵌入 [qtmqtt](https://github.com/qt/qtmqtt) | [物联网mqtt快速入门教程](https://www.bilibili.com/video/BV1rF411j7qo/) |
-| [proj/parallel101-modern](https://github.com/JasonkayZK/cpp-learn/tree/proj/parallel101-modern) | 2024-03-13 | Parallel101 现代C++项目实战 课程 | Bilibili:<br />https://www.bilibili.com/video/BV1Ur4y1V7Kh/ |
+| [proj/parallel101-modern](https://github.com/JasonkayZK/cpp-learn/tree/proj/parallel101-modern) | 2024-03-13 | Parallel101 现代C++项目实战 课程 | [现代C++项目实战](https://space.bilibili.com/263032155/channel/collectiondetail?sid=599074) |
 | | | | |
 
 <br/>
