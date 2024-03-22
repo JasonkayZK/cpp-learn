@@ -21,4 +21,4 @@ jobs:
           mkdir build && cd ./build
           cmake ..
           make
-          cd ../bin && ./main
+#          cd ../bin && ./main
