@@ -2,6 +2,10 @@
 
 It implements [malloc()](http://man7.org/linux/man-pages/man3/free.3.html), [calloc()](http://man7.org/linux/man-pages/man3/free.3.html), [realloc()](http://man7.org/linux/man-pages/man3/free.3.html) and [free()](http://man7.org/linux/man-pages/man3/free.3.html).
 
+文章：
+
+- [《【译】实现一个简单的内存分配器》](https://jasonkayzk.github.io/2024/03/22/【译】实现一个简单的内存分配器/)
+
 <br/>
 
 ## **How to use**
