@@ -57,6 +57,7 @@ Jupyter 分支为：
 | [lib/dbg-macro](https://github.com/JasonkayZK/cpp-learn/tree/lib/dbg-macro) | 2024-03-05 | 学习 [dbg-macro](https://github.com/sharkdp/dbg-macro) 使用 |                                                                                                                                                                        |
 | [proj/qtmqtt](https://github.com/JasonkayZK/cpp-learn/tree/proj/qtmqtt) | 2024-03-07 | 在 Qt 项目中嵌入 [qtmqtt](https://github.com/qt/qtmqtt) | [物联网mqtt快速入门教程](https://www.bilibili.com/video/BV1rF411j7qo/) |
 | [proj/parallel101-modern](https://github.com/JasonkayZK/cpp-learn/tree/proj/parallel101-modern) | 2024-03-13 | Parallel101 现代C++项目实战 课程 | [现代C++项目实战](https://space.bilibili.com/263032155/channel/collectiondetail?sid=599074) |
+| [proj/memalloc](https://github.com/JasonkayZK/cpp-learn/tree/proj/memalloc) | 2024-03-22 | 简单的内存分配器实现 | [《【译】实现一个简单的内存分配器》](https://jasonkayzk.github.io/2024/03/22/【译】实现一个简单的内存分配器/) |
 | | | | |
 
 <br/>
